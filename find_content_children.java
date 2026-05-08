@@ -1,0 +1,16 @@
+import java.util.*;
+class find_content_children {
+    public int findContentChildren(int[] g, int[] s) {
+        Arrays.sort(g); Arrays.sort(s);
+        int i = 0  ,j = 0, count = 0;
+        while(i<g.length && j<s.length) {
+            if(s[j] >= g[i]) {
+                count++; j++; i++;
+            }
+            else {
+                j++;
+            }
+        }
+        return count;
+    }
+}
